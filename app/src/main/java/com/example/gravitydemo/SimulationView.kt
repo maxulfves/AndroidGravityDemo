@@ -99,6 +99,8 @@ class SimulationView(context: Context?, thread:SimulationThread) : View(context)
                 }
                 MotionEvent.ACTION_MOVE -> {
 
+                    bob.myBall.position.set(pos)
+                    bob.myBall.velocity.set(Vector2D(0f, 0f))
                 }
             }
 
@@ -108,7 +110,7 @@ class SimulationView(context: Context?, thread:SimulationThread) : View(context)
 
 
 
-        return super.onTouchEvent(event)
+        return true;//super.onTouchEvent(event)
     }
 
 
